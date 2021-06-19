@@ -1,8 +1,8 @@
 {
   "name": "scathach-api",
-  "version": "0.0.7",
-  "description": "An advanced NSFW wrapper, complete rewrite and overhaul of the original Fate/Lewd Order API.",
-  "main": "index.js",
+  "version": "0.0.8",
+  "description": "Advanced NSFW wrapper, complete rewrite and overhaul of the original Fate/Lewd Order API. Getting closer into Lewd Holy Grail.",
+  "main": "api.js",
   "typings": "./typings/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

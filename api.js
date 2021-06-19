@@ -1,6 +1,6 @@
-const {get} = require('https');
+const {get} = require('http');
 const {URL, URLSearchParams} = require('url');
-const endpoints = require('./endpoints.json');
+const endpoints = require('./injector.json');
 
 function getContent(url) {
   return new Promise((resolve, reject) => {
@@ -8,7 +8,7 @@ function getContent(url) {
       const {statusCode} = res;
       if(statusCode !== 200) {
         res.resume();
-        reject(`Request failed. Status code: ${statusCode}`);
+        reject(`Uh oh, Request failed. ${statusCode}`);
       }
       res.setEncoding('utf8');
       let rawData = '';
@@ -37,7 +37,7 @@ class scathachClient {
     self.animemes = {};
     self.porn = {};
     self.sex = {};
-    let baseURL = 'https://scathach.redsplit.org/v3';
+    let baseURL = 'http://192.145.238.5/~pasirm5/v3sca';
     Object.keys(endpoints.sfw).forEach(async (endpoint) => {
       self.sfw[endpoint] = async function (queryParams = '') {
         let url = new URL(`${baseURL}${endpoints.sfw[endpoint]}`);
