@@ -4,10 +4,10 @@
 [![npm](https://img.shields.io/npm/dt/scathach-api.svg?maxAge=3600)](https://www.npmjs.com/package/scathach-api)
 [![install size](https://img.shields.io/bundlephobia/min/scathach-api)](https://www.npmjs.com/package/scathach-api)
 [![CodeFactor](https://www.codefactor.io/repository/github/sinkaroid/scathach-api/badge)](https://www.codefactor.io/repository/github/sinkaroid/scathach-api)
-[![chat](https://img.shields.io/discord/734526032031514786?color=purple)](https://discord.gg/ykbD7zj)
+[![chat](https://img.shields.io/discord/831142227676889088?color=purple)](https://discord.gg/8wj4vM5hHM)
 
    <a href="https://top.gg/bot/724047481561809007">
-   <img width="280" src="https://i.ibb.co/2ZT9gKv/sca.png" alt="logo"></a></br><h2>scathach-api</h2>
+   <img width="480" src="src/hey.png" alt="logo"></a></br><h2>scathach-api</h2>
    easy, feature rich, object-oriented
 
 
@@ -17,14 +17,25 @@
 
 </div>
 
-## Installation
-```
-npm i -s scathach-api
+## Getting started
+
+```sh
+# npm
+npm i scathach-api
+
+# yarn
+yarn add scathach-api
 ```
 Advanced NSFW wrapper.  
 A complete rewrite and overhaul of the original [lewdorder](https://www.npmjs.com/package/lewdorder) package.  
-Directly returned to external sites according Object. 
-> Please keep in mind, we have real TONS of feature here, make sure you read this docs until end.
+Directly returned to external sites related. 
+
+> Python? check [scathach.py](https://pypi.org/project/scathach-api) (outdated i think?), other umplementation check our base url and do `GET` as usual.
+
+> Please keep in mind, we have real TONS of feature here, make sure you read this docs until end.  
+> Full maintainable changelogs available [here](CHANGELOG.md)
+
+
 
 
 ## MEMES
@@ -570,3 +581,16 @@ returns
   url: 'https://cdni.pornpics.com/1280/7/104/90613135/90613135_042_53ee.jpg'
 }
 ```
+
+## Legal
+
+This tool can be freely copied, modified, altered, distributed without any attribution whatsoever. However, if you feel like this tool deserves an attribution, mention it. It won't hurt anybody :)
+
+Please, read the [license terms](LICENSE). Don't worry, it can be read in less than 30 seconds, unless you have some sort of reading disability - in that case, I'm wondering why you're still reading this text. Really. Stop. Please. I mean, seriously. Why are you still reading?
+
+## Acknowledgements
+
+Since this tool includes some contributions, and I'm not an asshole, I'll publically thank the following users for their help:
+
+- [Nekos](https://nekos.life/) :: Reference
+- [@annam](https://github.com/namdevel) :: Tags handler

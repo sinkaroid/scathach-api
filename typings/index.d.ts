@@ -433,6 +433,12 @@ declare class scathachClient {
     finger_in_mouth():Promise<scathachClient.scathachRequestResults>;
     deepthroatbbc():Promise<scathachClient.scathachRequestResults>;
   }
+  animated: {
+    blowjob():Promise<scathachClient.scathachRequestResults>;
+    missionary():Promise<scathachClient.scathachRequestResults>;
+    cowgirl():Promise<scathachClient.scathachRequestResults>;
+    doggy_style():Promise<scathachClient.scathachRequestResults>;
+  }
 }
 
 export = scathachClient;

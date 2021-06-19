@@ -37,6 +37,7 @@ class scathachClient {
     self.animemes = {};
     self.porn = {};
     self.sex = {};
+    self.animated = {};
     let baseURL = 'http://192.145.238.5/~pasirm5/v3sca';
     Object.keys(endpoints.sfw).forEach(async (endpoint) => {
       self.sfw[endpoint] = async function (queryParams = '') {
@@ -83,6 +84,13 @@ class scathachClient {
     Object.keys(endpoints.sex).forEach( async (endpoint) => {
       self.sex[endpoint] = async function (queryParams = '') {
         let url = new URL(`${baseURL}${endpoints.sex[endpoint]}`);
+        queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+        return await getContent(url.toString());
+      };
+    });
+    Object.keys(endpoints.animated).forEach( async (endpoint) => {
+      self.animated[endpoint] = async function (queryParams = '') {
+        let url = new URL(`${baseURL}${endpoints.animated[endpoint]}`);
         queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
         return await getContent(url.toString());
       };
