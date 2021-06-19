@@ -207,6 +207,7 @@ declare class scathachClient {
     klee():Promise<scathachClient.scathachRequestResults>;
     amber():Promise<scathachClient.scathachRequestResults>;
     furry():Promise<scathachClient.scathachRequestResults>;
+    waifu():Promise<scathachClient.scathachRequestResults>;
   }
   nsfw: {
     ahegao():Promise<scathachClient.scathachRequestResults>;
