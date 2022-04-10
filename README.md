@@ -6,7 +6,7 @@
    <br>
    <br> 
 
-[![Test get](https://github.com/sinkaroid/scathach-api/actions/workflows/get.yml/badge.svg)](https://github.com/sinkaroid/lac/actions/workflows/get.yml)
+[![Test get](https://github.com/sinkaroid/scathach-api/actions/workflows/get.yml/badge.svg)](https://github.com/sinkaroid/scathach-api/actions/workflows/get.yml)
 [![Documentation](https://github.com/sinkaroid/scathach-api/actions/workflows/docs.yml/badge.svg)](https://sinkaroid.github.io/scathach-api)
 
 ----
