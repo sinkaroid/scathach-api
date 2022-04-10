@@ -20,7 +20,7 @@ Previous versions is completely ended for its services.
 `npm install scathach-api@0.0.9 / yarn add scathach-api@0.0.9`
 
 ## Features
-<img align="right" src="https://scathach.dev/img/src/tong.png" width="400"></img>
+<img align="right" src="https://cdn.discordapp.com/attachments/952117487166705747/962562849874542642/tong.png" width="400"></img>
 This resources mostly hand-picked but also automate and does not low quality content
 - Fate Grand order
   - tons of lewds servants data
