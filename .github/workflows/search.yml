@@ -1,4 +1,4 @@
-name: Test search
+name: Search test
 
 on:
   push:
