@@ -4,3 +4,4 @@ package-lock.json
 docs/
 .idea/
 test/test.js
+CHANGELOG.md
