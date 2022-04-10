@@ -1,0 +1,49 @@
+{
+  "name": "scathach-api",
+  "version": "1.0.5",
+  "description": "A NodeJS wrapper to interacts with Scathach bot for its api",
+  "main": "build/index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinkaroid/scathach-api.git"
+  },
+  "scripts": {
+    "build": "rm -rf build/ && tsc",
+    "docs": "npx typedoc --entryPointStrategy expand src/ index.ts",
+    "lint": "npx eslint . --ext .ts",
+    "lint:fix": "npx eslint . --fix",
+    "test:get": "npx ts-node test/scathach.get.ts",
+    "test:search": "npx ts-node test/scathach.search.ts"
+  },
+  "keywords": [
+    "NSFW",
+    "wrapper",
+    "fgo",
+    "genshin impact",
+    "azurlane",
+    "booru"
+  ],
+  "author": "sinkaroid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sinkaroid/scathach-api/issues"
+  },
+  "dependencies": {
+    "phin": "^3.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "^7.32.0",
+    "npx": "^10.2.2",
+    "ts-node": "^10.7.0",
+    "typedoc": "^0.22.5",
+    "typedoc-plugin-rename-defaults": "^0.4.0",
+    "typescript": "^4.6.3"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
