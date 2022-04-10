@@ -154,7 +154,7 @@ This tool can be freely copied, modified, altered, distributed without any attri
 like this tool deserves an attribution, mention it. It won't hurt anybody
 
 ## Limitations
-- There is a hard limit of 100 posts per [`search()`](https://sinkaroid.github.io/lac/classes/index.Scathach.html) request
+- There is a hard limit of 100 posts per [`search()`](https://sinkaroid.github.io/scathach-api/classes/index.Scathach.html) request
 - There is a rate limit every 2 seconds per request
 - The instance has easy to overload, your data returns may lead to null
 
