@@ -120,7 +120,7 @@ class Scathach {
    * getReaction("smug")
    * getReaction("uwu")
    * getReaction("wink")
-   * @returns the random reaction from scathach bot
+   * @returns the random reaction that endpoints given
    */
   async getReaction(img: string) {
     try {
