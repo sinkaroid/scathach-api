@@ -3,3 +3,8 @@ node_modules
 .idea
 .vscode
 .github
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+package-lock.json
+SECURITY.md
+CHANGELOG.md
