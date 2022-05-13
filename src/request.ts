@@ -1,10 +1,9 @@
 import c from './consts';
 import { get, randomArray, ratelimit, delay } from './utils';
-const valid = ['angry', 'bonk', 'cry', 'happy', 'hug', 'kiss', 'lol', 'nom', 'pat', 'pout', 'smug', 'uwu', 'wink'];
 
 export default async function request(options:
     {
-        category: 'fgo' | 'genshin' | 'azur' | 'waifu' | 'sex' | 'gelbooru' | 'r34' | 'safe' | 'reaction',
+        category: 'fgo' | 'genshin' | 'azur' | 'waifu' | 'arknights' | 'fire_emblem' | 'gfl' | 'hololive' | 'kancolle' | 'sex' | 'gelbooru' | 'r34' | 'safe' | 'animesex' | 'reaction',
         tags?: string | string[],
         apikey?: string,
         limit?: number,
@@ -20,48 +19,63 @@ export default async function request(options:
         
 
   case 'fgo':
-    return ratelimit(delay, (await get(c.endpoint.fgo, options.useragent || '')).body as string);
+    return ratelimit(delay, await get(c.endpoint.fgo, options.useragent || '').then(res => res.body as string));
   case 'genshin':
-    return ratelimit(delay, (await get(c.endpoint.genshin, options.useragent || '')).body as string);
+    return ratelimit(delay, await get(c.endpoint.genshin, options.useragent || '').then(res => res.body as string));
   case 'azur':
-    return ratelimit(delay, (await get(c.endpoint.azur, options.useragent || '')).body as string);
+    return ratelimit(delay, await get(c.endpoint.azur, options.useragent || '').then(res => res.body as string));
   case 'waifu':
-    return ratelimit(delay, (await get(c.endpoint.waifu, options.useragent || '')).body as string);
+    return ratelimit(delay, await get(c.endpoint.waifu, options.useragent || '').then(res => res.body as string));
+  case 'arknights':
+    return ratelimit(delay, await get(c.endpoint.arknights, options.useragent || '').then(res => res.body as string));
+  case 'fire_emblem':
+    return ratelimit(delay, await get(c.endpoint.fire_emblem, options.useragent || '').then(res => res.body as string));
+  case 'gfl':
+    return ratelimit(delay, await get(c.endpoint.gfl, options.useragent || '').then(res => res.body as string));
+  case 'hololive':
+    return ratelimit(delay, await get(c.endpoint.hololive, options.useragent || '').then(res => res.body as string));
+  case 'kancolle':
+    return ratelimit(delay, await get(c.endpoint.kancolle, options.useragent || '').then(res => res.body as string));
   case 'sex':
-    return ratelimit(delay, (await get(c.endpoint.sex, options.useragent || '')).body as string);
+    return ratelimit(delay, await get(c.endpoint.sex, options.useragent || '').then(res => res.body as string));
   case 'reaction':
             
     if (!options.img) throw Error('No Tags provided');
     
-    if (!valid.includes(options.img))
-      throw Error('Invalid parameter, please use one of the following: ' + valid.join(', '));
-    const res: unknown = (await get(`${c.endpoint.reaction}/${options.img}.json`, options.useragent || '')).body;
-    const gambar: string = await res as string;
-    return { url: randomArray(gambar, `https://gitlab.com/d0g/servant/-/raw/master/${options.img}`) };
+    if (!c.endpoint.reaction.includes(options.img))
+      throw Error('Invalid parameter, please use one of the following: ' + c.endpoint.reaction.join(', '));
+    const res = await get(`https://gitlab.com/d0g/servant/-/raw/master/_constant/${options.img}.json`, options.useragent || '').then(res => res.body as string);
+    return { url: randomArray(res, `https://gitlab.com/d0g/servant/-/raw/master/${options.img}`) };
+  
+  case 'animesex':
+            
+    if (!options.img) throw Error('No Tags provided');
+    
+    if (!c.endpoint.animesex.includes(options.img))
+      throw Error('Invalid parameter, please use one of the following: ' + c.endpoint.animesex.join(', '));
+    const gitlab = await get(`https://gitlab.com/d0g/lewd/-/raw/master/${options.img}.json`, options.useragent || '').then(res => res.body as string);
+    return { url: randomArray(gitlab) };
 
   case 'gelbooru':
     if (!options.tags) throw Error('No Tags provided');
     if (options.limit && (options.limit > 100 || options.limit < 25)) throw Error('Limit must be between 25 and 100');
     const geltags = options.tags instanceof Array ? options.tags.join('+') : options.tags;
-    const gelres: unknown = ratelimit(delay, (await get(`${c.endpoint.gelbooru}/?tags=${geltags}&limit=${options.limit || 50}&page=${options.page || 1}&shuffle=true`, options.useragent || '')).body as string);
-    const gel: string = await gelres as string;
-    return gel;
+    const gelres = ratelimit(delay, await get(`${c.endpoint.gelbooru}/?tags=${geltags}&limit=${options.limit || 50}&page=${options.page || 1}&shuffle=true`, options.useragent || '').then(res => res.body as string));
+    return gelres;
 
   case 'r34':
     if (!options.tags) throw Error('No Tags provided');
     if (options.limit && (options.limit > 100 || options.limit < 25)) throw Error('Limit must be between 25 and 100');
     const r34tags = options.tags instanceof Array ? options.tags.join('+') : options.tags;
-    const r34res: unknown = ratelimit(delay, (await get(`${c.endpoint.r34}/?tags=${r34tags}&limit=${options.limit || 50}&page=${options.page || 1}&shuffle=true`, options.useragent || '')).body as string);
-    const r34: string = await r34res as string;
-    return r34;
+    const r34res = ratelimit(delay, await get(`${c.endpoint.r34}/?tags=${r34tags}&limit=${options.limit || 50}&page=${options.page || 1}&shuffle=true`, options.useragent || '').then(res => res.body as string));
+    return r34res;
 
   case 'safe':
     if (!options.tags) throw Error('No Tags provided');
     if (options.limit && (options.limit > 100 || options.limit < 25)) throw Error('Limit must be between 25 and 100');
     const safetags = options.tags instanceof Array ? options.tags.join('+') : options.tags;
-    const saferes: unknown = ratelimit(delay, (await get(`${c.endpoint.safe}/?tags=${safetags}&limit=${options.limit || 50}&page=${options.page || 1}&shuffle=true`, options.useragent || '')).body as string);
-    const safe: string = await saferes as string;
-    return safe;
+    const saferes: unknown = ratelimit(delay, await get(`${c.endpoint.safe}/?tags=${safetags}&limit=${options.limit || 50}&page=${options.page || 1}&shuffle=true`, options.useragent || '').then(res => res.body as string));
+    return saferes;
             
 
   default:
