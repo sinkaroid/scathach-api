@@ -1,5 +1,5 @@
 import phin from 'phin';
-const delay = 2000;
+const delay = 1000;
 /**
    * GET request to scathach bot API
    * @param url The related endpoint
@@ -25,7 +25,11 @@ export async function get(url: string, headers: string) {
    * @returns shuffled array
    */
 export function randomArray(arr: string, path = '') {
-  return `${path}/${arr[Math.floor(Math.random() * arr.length)]}`;
+  let pisah;
+  if (path) pisah = '/';
+  else pisah = '';
+
+  return `${path}${pisah}${arr[Math.floor(Math.random() * arr.length)]}`;
 }
 
 /**
