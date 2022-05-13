@@ -19,21 +19,22 @@ Previous versions is completely ended for its services.
 > This version is completely rewritten and just focused on minigame API, If you still rely on the old version install with  
 `npm install scathach-api@0.0.9 / yarn add scathach-api@0.0.9`
 
+This resources mostly hand-picked but also automate pick and does not low quality content
+
 ## Features
-<img align="right" src="https://cdn.discordapp.com/attachments/952117487166705747/962562849874542642/tong.png" width="400"></img>
-This resources mostly hand-picked but also automate and does not low quality content
-- Fate Grand order
-  - tons of lewds servants data
-- Genshin Impact
-  - tons of lewds genshin data
-- Azur Lane
-  - tons of lewds ship data
-- Get sex
-  - tons of random gifs
-- Waifu
-  - Tons of wholesome waifus
-- Reaction
-  - Wholesome fgo reaction like smug, cry, pat and more
+<img align="right" src="https://cdn.discordapp.com/attachments/952117487166705747/962562849874542642/tong.png" width="440"></img>
+- Fate Grand Order sex
+- Genshin Impact sex
+- Azur Lane sex
+- Hololive sex
+- Arknights sex
+- Fire Emblem sex
+- Girls' Frontline sex
+- Kancolle sex
+- Random gif sex
+- Get wholesome waifu
+- Fgo reaction
+- Anime sex like `nekos.life` do, but more juicier
 
 ---
 
@@ -57,22 +58,40 @@ const config = {
 const sca = new Scathach(config);
 
 sca.getFgo().then((res) => { console.log('fgo', res) });
-// => Random Normalizes FGO lewds data
+// => Random normalizes FGO sex data
 
 sca.getGenshin().then((res) => { console.log('genshin', res) });
-// => Random Normalizes Genshin lewds data
+// => Random normalizes Genshin impact sex data
 
 sca.getAzur().then((res) => { console.log('azur', res) });
-// => Random Normalizes Azurlane sex data
+// => Random normalizes Azurlane sex data
+
+sca.getHololive().then((res) => { console.log('hololive', res) });
+// => Random normalizes Hololive sex data
+
+sca.getArknights().then((res) => { console.log('arkinghts', res) });
+// => Random normalizes Arkinghts sex data
+
+sca.getFireEmblem().then((res) => { console.log('fire_emblem', res) });
+// => Random normalizes Fire emblem sex data
+
+sca.getGirlsFrontline().then((res) => { console.log('gfl', res) });
+// => Random normalizes Girls' frontline sex data
+
+sca.getKancolle().then((res) => { console.log('kancolle', res) });
+// => Random normalizes Kancolle girls sex data
 
 sca.getReaction('smug').then((res) => { console.log('smug', res) });
 // => Random smug reaction
 
 sca.searchR34('futanari', 100).then((res) => { console.log('futanari', res) });
 // => Bulk image request from r34, not an object, ready to extends
+
+sca.getAnimeSex('hentai').then((res) => { console.log('anime sex', res) });
+// => Get random anime sex like nekos.life do but more juicier 
 ```
 
-## Results
+## Results example
 - **Fgo**
 ```js
 fgo {
@@ -127,6 +146,7 @@ azur {
   fetch: 'eJ4TYhpE7ARmvwQxMldj'
 }
 ```
+
 - **search method**
 
 ```js
@@ -155,8 +175,9 @@ like this tool deserves an attribution, mention it. It won't hurt anybody
 
 ## Limitations
 - There is a hard limit of 100 posts per [`search()`](https://sinkaroid.github.io/scathach-api/classes/index.Scathach.html) request
-- There is a rate limit every 2 seconds per request
+- There is a rate limit every 1 seconds per request
 - The instance has easy to overload, your data returns may lead to null
 
-## EoF
-This instance sits with my bots, the server is not cheap for me, any kind of donations helps me a lot
+## Support me
+> This instance sits together with Scathach bot, the server may easy to overload then upgrading stuff is not really cheap for me, any kind of donations will helps.
+<img width="500" src="https://cdn.discordapp.com/attachments/952117487166705747/974559294517284874/Screenshot_428.png" alt="cf">
