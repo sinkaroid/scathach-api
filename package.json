@@ -1,7 +1,7 @@
 {
   "name": "scathach-api",
-  "version": "1.0.7",
-  "description": "A NodeJS wrapper to interacts with Scathach bot for its api",
+  "version": "1.0.12",
+  "description": "A NodeJS wrapper to interacts with Scathach bot",
   "main": "build/index.js",
   "types": "index.d.ts",
   "repository": {
