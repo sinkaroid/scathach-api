@@ -5,3 +5,4 @@ docs/
 .idea/
 test/test.js
 CHANGELOG.md
+yarn.lock
