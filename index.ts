@@ -1,5 +1,9 @@
 import defaults from './src/defaults';
 import { config } from './src/types';
+import { IReaction } from './src/types';
+import { ISexAnime } from './src/types';
+import { IWaifu } from './src/types';
+import { IImgboard } from './src/types';
 import request from './src/request';
 
 
@@ -29,7 +33,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
     
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -45,7 +49,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -61,7 +65,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -77,7 +81,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as IWaifu;
 
   }
 
@@ -92,7 +96,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -108,7 +112,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -124,7 +128,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -140,7 +144,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -156,7 +160,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -172,7 +176,7 @@ class Scathach {
       apikey: this.apikey
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as ISexAnime;
 
   }
 
@@ -203,7 +207,7 @@ class Scathach {
       useragent: this.useragent
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as IReaction;
 
   }
 
@@ -250,7 +254,7 @@ class Scathach {
       useragent: this.useragent
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as IReaction;
 
   }
 
@@ -272,7 +276,7 @@ class Scathach {
       useragent: this.useragent
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as IImgboard;
 
   }
 
@@ -295,7 +299,7 @@ class Scathach {
       useragent: this.useragent
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as IImgboard;
 
   }
 
@@ -318,7 +322,7 @@ class Scathach {
       useragent: this.useragent
     }).catch((err) => console.error(err));
 
-    return res;
+    return res as IImgboard;
 
   }
 

@@ -23,18 +23,18 @@ This resources mostly hand-picked but also automate pick and does not low qualit
 
 ## Features
 <img align="right" src="https://cdn.discordapp.com/attachments/952117487166705747/962562849874542642/tong.png" width="440"></img>
-- Fate Grand Order sex
-- Genshin Impact sex
-- Azur Lane sex
+- Fate grand order sex
+- Genshin impact sex
+- Azur lane sex
 - Hololive sex
 - Arknights sex
-- Fire Emblem sex
-- Girls' Frontline sex
+- Fire emblem sex
+- Girls' frontline sex
 - Kancolle sex
 - Random gif sex
 - Get wholesome waifu
 - Fgo reaction
-- Anime sex like `nekos.life` do, but more juicier
+- Anime sex like `nekos.life` do, but juicier
 
 ---
 
@@ -96,54 +96,54 @@ sca.getAnimeSex('hentai').then((res) => { console.log('anime sex', res) });
 ```js
 fgo {
   data: {
-    character: 'nero claudius',
+    character: 'medusa (rider)',
     approver: '@sinkaroid',
     favorites: 0,
     rating: 'questionable',
     category: 'fgo'
   },
-  info: '0.83',
-  image: 'https://tomoe.scathach.software/original/3e/36/3e36f644a051bee376f1dda8c3717880.jpg',
+  info: '0.48',
+  image: 'https://tomoe.sinkaroid.org/original/d3/96/d396bfb5afed67e708a0664473963b0c.jpg',
   size: 'original',
   type: 'jpg',
   nsfw: true,
-  fetch: 'rUFcyOimM2'
+  fetch: '6PXq4YVgBS'
 }
 ```
 - **Genshin**
 ```js
 genshin {
   data: {
-    character: 'kujou sara',
+    character: 'beidou',
     approver: '@sinkaroid',
     favorites: 0,
-    rating: 'explicit',
+    rating: 'questionable',
     category: 'genshin_impact'
   },
-  info: '0.85',
-  image: 'https://tomoe.scathach.software/original/59/91/599160ee0840872d78250edcf4fd2d5c.png',
+  info: '0.39',
+  image: 'https://tomoe.sinkaroid.org/original/87/e8/87e8e55ab9a7c02779c7086ec8f36641.png',
   size: 'original',
   type: 'png',
   nsfw: true,
-  fetch: 'g5ljvRpnGL'
+  fetch: 'qyVAlZMS9b'
 }
 ```
 - **Azur lane**
 ```js
 azur {
   data: {
-    character: 'formidable',
+    character: 'taihou',
     approver: '@sinkaroid',
     favorites: 0,
-    rating: 'questionable',
+    rating: 'explicit',
     category: 'azur_lane'
   },
-  info: '0.70',
-  image: 'https://tomoe.scathach.software/original/c6/40/c6404521f422560458c767dde9410731.jpg',
+  info: '0.41',
+  image: 'https://tomoe.sinkaroid.org/original/5c/40/5c408922b9195f37e0744adda01bdbac.jpg',
   size: 'original',
   type: 'jpg',
   nsfw: true,
-  fetch: 'eJ4TYhpE7ARmvwQxMldj'
+  fetch: 'DkOC0M3GrNQUZpAcHWqP'
 }
 ```
 
